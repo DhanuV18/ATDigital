@@ -214,9 +214,9 @@ a {
     transition: all 0.3s;
 }
 
-.collapsible--expanded .nav__toggler {
+/* .collapsible--expanded .nav__toggler {
     transform: rotate(0);
-}
+} */
 
 .collapsible--expanded .collapsible__content {
     max-height: 100%;
@@ -226,18 +226,27 @@ a {
 
 .collapsible--expanded .nav{
     height: 100%;
-
 }
+
 @media screen and (max-width: 768px){
     .collapsible--expanded .collapsible__content {
-        /* max-height: 100%; */
         opacity: 1; 
-        height: 100vh;
         margin-top: 2rem;        
     }
 
-}
+    .collapsible--expanded  .nav__list{
+        height: 100vh;
+    }
 
+    .collapsible--expanded .nav__brand{
+        opacity: 0;
+    }
+
+    .collapsible--expanded .nav{
+        background-color: white;
+    }
+
+}
 
 .collapsible--expanded .collapsible__content .faq__sub-heading {
   color: var(--color-primary);
@@ -261,8 +270,8 @@ a {
 }
 
 .nav__item {
-    padding: 0.5rem 2rem;
-    border-bottom: 1px solid var(--color-primary);    
+    padding: 1rem 2rem;
+    
 }
 
 .nav__item:last-of-type {
@@ -270,35 +279,45 @@ a {
 }
 
 .nav__item>a {
-    color: white;
+    color: black;
     font-size: 2.2rem;
     transition: color 0.3s;
-
+    text-transform: uppercase;
 }
-
-
 
 .nav__toggler {
     opacity: 0.5;
     transition: box-shadow 0.15s;
     cursor: pointer;
+    height: 25px;
+    width: 25px;
 }
 
-.nav.collapsible--expanded .nav__toggler {
+.nav .collapsible--expanded .nav__toggler {
     opacity: 1;
-    box-shadow: 0 0 3px 3px var(--color-primary);
     border-radius: 5px;
     outline: 0;
     border: 0;
 }
 
+
 .nav__brand {
-    transform: translateY(5px);
+    transform: translateY(-3px);
     width: 200px; 
 }
 
 
 @media screen and (min-width: 768px) {
+.nav {
+    background: var(--color-primary);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 2.6rem 4rem 2.6rem 4rem;
+    align-items: center;
+}
+
+
     .nav__toggler {
         display: none;
     }
@@ -318,6 +337,7 @@ a {
         border: 0;
         text-transform: uppercase;
         font-size: 1.4rem;
+        color: white;
     }
 
 }
