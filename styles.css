@@ -160,6 +160,8 @@ a {
 
 .hero__image{
     background-image: url('./images/hero.png');
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 
 .hero__content{
@@ -188,6 +190,7 @@ a {
         line-height: 48px;
         font-weight: 700;
     }
+
 }
 
 /* Collapsibles */
